@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddNotAbletoRequests < ActiveRecord::Migration[6.0]
   def change
     add_column :non_medical_reqs, :not_able, :boolean

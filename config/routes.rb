@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  devise_for :users, :controllers => { :registrations => 'registrations'}
+  devise_for :users, controllers: { registrations: 'registrations' }
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/healthvolunteer', to: redirect('https://docs.google.com/forms/d/e/1FAIpQLSd6bQwTa5uTSgyo-Da-ir6bR0sxfGrRDtyxobBlkvaVlA8Z2A/viewform?usp=sf_link')
 
-  get 'find_phone' => "contacts#find_phone"
+  get 'find_phone' => 'contacts#find_phone'
   resources :contacts, except: [:destroy] do
     get :make_call, on: :member
     get :generate_non_medical_reqs, on: :collection

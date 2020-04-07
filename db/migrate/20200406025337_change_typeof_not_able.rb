@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ChangeTypeofNotAble < ActiveRecord::Migration[6.0]
   def change
     remove_column :non_medical_reqs, :not_able

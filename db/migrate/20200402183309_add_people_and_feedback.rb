@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddPeopleAndFeedback < ActiveRecord::Migration[6.0]
   def change
     add_column :contacts, :feedback, :string

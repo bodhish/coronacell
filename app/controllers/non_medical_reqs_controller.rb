@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 class NonMedicalReqsController < ApplicationController
   def create
     @contact = Contact.find(params[:contact_id])
     @non_medical_req = @contact.non_medical_reqs.create(non_medical_req_params)
-   # @non_medical_req.user_id = current_user.id
+    # @non_medical_req.user_id = current_user.id
 
     if @non_medical_req.save
       respond_to do |format|

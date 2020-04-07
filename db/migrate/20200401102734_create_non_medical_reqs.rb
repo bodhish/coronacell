@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateNonMedicalReqs < ActiveRecord::Migration[6.0]
   def change
     create_table :non_medical_reqs do |t|
